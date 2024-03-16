@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FeedBack</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="mulish">
+    <!-- navbar -->
+
+    <div class="container mx-auto mt-8 mb-4">
+      <div class="flex justify-between items-center">
+        <h1 class="title">FeedHub</h1>
+        <div class="side-nav flex gap-4">
+          <div class="logo hidden lg:flex gap-3">
+            <div class="tooltip tooltip-top" data-tip="Home">
+              <img src="images/Frame 2.png" alt="" />
+            </div>
+            <div class="tooltip tooltip-top" data-tip="Write Something">
+              <img src="images/Frame 3.png" alt="" />
+            </div>
+            <div class="tooltip tooltip-top" data-tip="New User">
+              <img src="images/Frame 4.png" alt="" />
+            </div>
+            <div class="tooltip tooltip-top" data-tip="Saved Items">
+              <img src="images/Frame 5.png" alt="" />
+            </div>
+          </div>
+          <div class="sign-in">
+            <button>Sign In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar -->
+
+    <!-- hero -->
+
+    <div class="container mx-auto mb-10">
+      <div class="hero flex justify-between p-20 items-center">
+        <div class="hero-left space-y-5">
+          <h1>
+            Welcome to<br />
+            <span class="text-gradient">FeedHub</span> Forum
+          </h1>
+          <p>
+            Share your opinion with us. <br />Because it matters the most to us!
+          </p>
+          <div class="search-bar">
+            <input
+              type="text"
+              name=""
+              id="search"
+              placeholder="Search here anything..."
+            />
+            <button onclick="searchHandler()">Search</button>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="stat flex justify-between">
+            <p>Users</p>
+            <p>01</p>
+          </div>
+          <div class="stat flex justify-between">
+            <p>Forum</p>
+            <p>05</p>
+          </div>
+          <div class="stat flex justify-between">
+            <p>Topics</p>
+            <p>01</p>
+          </div>
+          <div class="stat flex justify-between">
+            <p>Replies</p>
+            <p>01</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main -->
+
+    <div class="container mx-auto mb-12">
+      <div class="discuss-up mb-10">
+        <h1 class="mb-4">Let's Discuss</h1>
+        <p>
+          Join the conversation and share your thoughts in our vibrant discuss
+          zone
+        </p>
+        <p>
+          Explore ideas, exchange insights, and engage with fellow enthusiasts
+          in our dynamic community
+        </p>
+      </div>
+      <div class="spinner flex justify-center hidden" id="spinner-top">
+        <span class="loading loading-ball loading-xs"></span>
+        <span class="loading loading-ball loading-sm"></span>
+        <span class="loading loading-ball loading-md"></span>
+        <span class="loading loading-ball loading-lg"></span>
+      </div>
+      <div class="discuss-down grid grid-cols-1 lg:grid-cols-2 gap-8" gap-4>
+        <div class="post-container">
+          <div id="all-post"></div>
+          <div class="posts gap-8 mb-8 flex hidden" id="no-post">
+            <p class="text-xl font-bold">No Post Found</p>
+          </div>
+        </div>
+        <div class="read">
+          <div class="read-header flex justify-between items-center">
+            <h1>Read Items</h1>
+            <p>Mark as Read(<span id="read-count">0</span>)</p>
+          </div>
+          <div class="read-footer" id="read-items"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main -->
+
+    <!-- join forum -->
+
+    <div class="container mx-auto mb-12">
+      <div class="forum flex justify-between items-center">
+        <div class="forum-left space-y-5">
+          <h1>Join Our Forum</h1>
+          <p>
+            Discover an inclusive space where ideas converge and discussions
+            flourish.<br />Join our forum and be part of the conversation
+            shaping tomorrow's narratives.
+          </p>
+          <button>Registered Now</button>
+        </div>
+        <div class="forum-right">
+          <img src="images/joinforum.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- join forum -->
+
+    <!-- latest post -->
+
+    <div class="container mx-auto mb-12">
+      <div class="discuss-up mb-8">
+        <h1 class="mb-4">Latest Posts</h1>
+        <p>
+          Join the conversation and share your thoughts in our vibrant discuss
+          zone
+        </p>
+        <p>
+          Explore ideas, exchange insights, and engage with fellow enthusiasts
+          in our dynamic community
+        </p>
+      </div>
+      <div class="spinner flex justify-center hidden" id="spinner-bottom">
+        <span class="loading loading-ball loading-xs"></span>
+        <span class="loading loading-ball loading-sm"></span>
+        <span class="loading loading-ball loading-md"></span>
+        <span class="loading loading-ball loading-lg"></span>
+      </div>
+      <div
+        class="latest-post grid grid-cols-1 lg:grid-cols-3 gap-4"
+        id="latest-post"
+      >
+        <!-- <div class="post-card mx-auto space-y-3">
+          <div class="post-img">
+            <img src="images/Rectangle 4.png" alt="" />
+          </div>
+          <div class="date flex gap-4">
+            <img src="images/Frame.png" alt="" />
+            <p>29 January 2024</p>
+          </div>
+          <h1>What will a mars habitat force that impact in our daily life!</h1>
+          <p>
+            Yes, you can run unit tests and view the results directly within the
+            app.
+          </p>
+          <div class="post-author flex">
+            <img src="images/Ellipse 1.png" alt="" />
+            <div class="post-author-details">
+              <h1>Cameron Williamson</h1>
+              <p>Author</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-card space-y-3">
+          <div class="post-img">
+            <img src="images/Rectangle 4.png" alt="" />
+          </div>
+          <div class="date flex gap-4">
+            <img src="images/Frame.png" alt="" />
+            <p>29 January 2024</p>
+          </div>
+          <h1>What will a mars habitat force that impact in our daily life!</h1>
+          <p>
+            Yes, you can run unit tests and view the results directly within the
+            app.
+          </p>
+          <div class="post-author flex">
+            <img src="images/Ellipse 1.png" alt="" />
+            <div class="post-author-details">
+              <h1>Cameron Williamson</h1>
+              <p>Author</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-card space-y-3">
+          <div class="post-img">
+            <img src="images/Rectangle 4.png" alt="" />
+          </div>
+          <div class="date flex gap-4">
+            <img src="images/Frame.png" alt="" />
+            <p>29 January 2024</p>
+          </div>
+          <h1>What will a mars habitat force that impact in our daily life!</h1>
+          <p>
+            Yes, you can run unit tests and view the results directly within the
+            app.
+          </p>
+          <div class="post-author flex">
+            <img src="images/Ellipse 1.png" alt="" />
+            <div class="post-author-details">
+              <h1>Cameron Williamson</h1>
+              <p>Author</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- latest post -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container mx-auto text-center">
+        <h1>FeedHub</h1>
+        <p>
+          Welcome to FeedHub, your digital destination for insightful articles,
+          engaging content, and thought-provoking discussions.
+        </p>
+        <p>
+          Discover the latest trends, expert opinions, and valuable insights—all
+          in one place, right here at FeedHub.
+        </p>
+        <div class="img-container">
+          <img src="images/Social.png" alt="" />
+        </div>
+        <div class="hr-container">
+          <hr class="horizontal" />
+        </div>
+        <h6>All rights reserved, 2024</h6>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="index.js"></script>
+  </body>
+</html>

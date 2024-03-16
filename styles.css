@@ -1,0 +1,441 @@
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.mulish {
+  font-family: "Mulish", sans-serif;
+}
+
+/* navbar */
+
+.title {
+  color: rgb(18, 19, 45);
+  font-family: Mulish;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 45px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.logo > img {
+  width: 56px;
+  height: 56px;
+  margin-right: 10px;
+}
+
+.sign-in {
+  border-radius: 50px;
+  background: rgb(121, 125, 252);
+  color: rgb(255, 255, 255);
+  font-family: Mulish;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 18px 40px 18px 40px;
+}
+
+/* navbar */
+
+/* hero */
+
+.hero {
+  border-radius: 32px;
+  background: url("images/Group 10.png");
+}
+
+.hero-left > h1 {
+  font-family: Mulish;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 86px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+}
+
+.text-gradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    324deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(1, 104, 143, 1) 30%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-left > p {
+  color: white;
+  font-family: Mulish;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.search-bar {
+  background: rgb(255, 255, 255);
+  position: relative;
+  width: auto;
+  border-radius: 63px;
+  overflow: hidden;
+  display: flex;
+}
+
+.search-bar > input {
+  height: 56px;
+  flex: 1;
+  outline: none;
+  padding: 1rem 2rem;
+}
+
+.search-bar > button {
+  border-radius: 63px;
+  background: rgb(121, 125, 252);
+  position: absolute;
+  right: 0;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.hero-right {
+  border-radius: 32px;
+  background: rgb(255, 255, 255);
+  max-height: 550px;
+  padding: 2rem;
+}
+
+.stat {
+  display: flex;
+  color: rgba(18, 19, 45, 0.8);
+  font-family: Mulish;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+/* hero */
+
+/* discuss */
+
+.discuss-up > h1 {
+  color: rgb(18, 19, 45);
+  font-family: Mulish;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 50px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.discuss-up > p {
+  color: rgba(18, 19, 45, 0.6);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.discuss-down {
+  grid-template-columns: 60% 1fr !important;
+}
+
+.posts {
+  box-sizing: border-box;
+  border: 1px solid rgb(121, 125, 252);
+  border-radius: 24px;
+  background: rgba(121, 125, 252, 0.1);
+  padding: 2rem;
+}
+
+.avater {
+  position: relative;
+  width: 100px;
+  height: max-content;
+  border-radius: 16px;
+  background: rgb(255, 255, 255);
+}
+
+.avater > img {
+  border-radius: 20%;
+}
+
+.online {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(131%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.category > p {
+  color: rgba(18, 19, 45, 0.8);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.post-details {
+  flex: 1;
+}
+
+.post-details > h1 {
+  color: rgb(18, 19, 45);
+  font-family: Mulish;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.post-details > p {
+  color: rgba(18, 19, 45, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.horizontal {
+  border: 1px dashed rgba(18, 19, 45, 0.25);
+}
+
+.read {
+  border-radius: 24px;
+  background: rgba(18, 19, 45, 0.05);
+  padding: 2rem;
+  height: max-content;
+}
+
+.read-header > h1 {
+  color: rgb(18, 19, 45);
+  font-family: Mulish;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.read-header > p {
+  color: rgba(18, 19, 45, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.read-items {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+
+.read-items > h1 {
+  color: rgb(18, 19, 45);
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.read-items .view img {
+  width: 21px;
+  height: 20px;
+}
+
+/* discuss */
+
+/* join forum */
+.forum {
+  border-radius: 32px;
+  background: url("images/Group 27.png") no-repeat;
+  padding: 3rem 5rem;
+  background-size: cover;
+}
+
+.forum-left > h1 {
+  color: rgb(255, 255, 255);
+  font-family: Mulish;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 50px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.forum-left > p {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Mulish;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.forum-left > button {
+  border-radius: 50px;
+  background: rgb(121, 125, 252);
+  color: white;
+  padding: 1rem;
+}
+
+/* join forum */
+
+/* latest post */
+
+.post-card {
+  box-sizing: border-box;
+  border: 1px solid rgba(18, 19, 45, 0.15);
+  border-radius: 24px;
+  background: rgb(255, 255, 255);
+  padding: 2rem 3rem;
+}
+
+.post-img > img {
+  width: 100%;
+  height: auto;
+}
+
+.date {
+  align-items: center;
+}
+
+.post-card > h1 {
+  color: rgb(18, 19, 45);
+  font-family: Mulish;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.post-card > p {
+  color: rgba(18, 19, 45, 0.6);
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.post-author {
+  gap: 1rem;
+}
+
+.post-author > img {
+  width: 44px;
+  height: 44px;
+}
+
+.post-author-details > h1 {
+  color: rgb(18, 19, 45);
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.post-author-details > p {
+  color: rgb(18, 19, 45);
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+/* latest post */
+
+/* footer */
+
+footer {
+  background: linear-gradient(
+    180deg,
+    rgba(18, 19, 45, 0.05),
+    rgba(18, 19, 45, 0) 100%
+  );
+  padding: 5rem 0;
+}
+
+footer h1 {
+  margin: 20px 0;
+  color: rgb(18, 19, 45);
+  font-family: Mulish;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 45px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+footer img {
+  margin: 20px 0;
+  text-align: center;
+}
+
+footer hr {
+  width: 70%;
+  margin: 20px 0;
+}
+
+footer p {
+  color: rgba(18, 19, 45, 0.7);
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.hr-container,
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+footer h6 {
+  color: rgba(18, 19, 45, 0.5);
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: left;
+  margin: 40px 0;
+  text-align: center;
+}
+
+/* footer */
